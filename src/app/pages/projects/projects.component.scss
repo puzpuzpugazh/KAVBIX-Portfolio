@@ -1,0 +1,473 @@
+/* ==========================================================================
+   PROJECTS PAGE SCSS - KAVBIX TECHNOLOGIES
+   ========================================================================== */
+
+.projects-hero-section {
+  text-align: center;
+  background: linear-gradient(180deg, #f8fafc 0%, #edf2f7 100%);
+  border-bottom: 1px solid var(--color-border);
+}
+
+.projects-hero-content {
+  max-width: 860px;
+  margin: 0 auto;
+}
+
+.hero-title {
+  font-size: clamp(2.3rem, 4.5vw, 3.6rem);
+  line-height: 1.15;
+  margin: 1.25rem 0 1.25rem 0;
+}
+
+.hero-subtitle {
+  font-size: 1.15rem;
+  color: var(--color-text-muted);
+  line-height: 1.65;
+  margin-bottom: 2.5rem;
+}
+
+.projects-filter-pills {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.65rem;
+  flex-wrap: wrap;
+}
+
+.cat-filter-btn {
+  background: #ffffff;
+  border: 1px solid var(--color-border);
+  padding: 0.5rem 1.25rem;
+  border-radius: var(--radius-pill);
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--color-text-muted);
+  cursor: pointer;
+  box-shadow: var(--shadow-xs);
+  transition: all var(--transition-fast);
+}
+
+.cat-filter-btn:hover {
+  border-color: var(--color-primary);
+  color: var(--color-primary);
+}
+
+.cat-filter-btn.active {
+  background: var(--color-secondary);
+  border-color: var(--color-secondary);
+  color: #ffffff;
+  box-shadow: var(--shadow-sm);
+}
+
+/* Projects Vertical Flow */
+.projects-list-section {
+  padding: 5rem 0;
+}
+
+.projects-vertical-flow {
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
+}
+
+.project-detail-card {
+  padding: 0;
+  overflow: hidden;
+  scroll-margin-top: 100px;
+}
+
+.project-header-banner {
+  padding: 3rem 2.5rem;
+  color: #ffffff;
+}
+
+.banner-meta {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-bottom: 1.25rem;
+}
+
+.meta-tag {
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(8px);
+  padding: 0.25rem 0.75rem;
+  border-radius: var(--radius-pill);
+}
+
+.client-tag {
+  background: rgba(56, 189, 248, 0.25);
+  color: #e0f2fe;
+}
+
+.project-headline {
+  color: #ffffff;
+  font-size: clamp(1.8rem, 3vw, 2.4rem);
+  line-height: 1.2;
+  margin-bottom: 0.65rem;
+}
+
+.project-tagline-text {
+  font-size: 1.05rem;
+  color: #e2e8f0;
+  line-height: 1.55;
+  max-width: 900px;
+}
+
+.project-content-body {
+  padding: 2.75rem;
+}
+
+/* Problem & Solution Side Grid */
+.ps-side-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.75rem;
+  margin-bottom: 2rem;
+}
+
+.ps-card {
+  border-radius: var(--radius-md);
+  padding: 1.75rem;
+}
+
+.problem-card {
+  background: #fef2f2;
+  border: 1px solid #fee2e2;
+}
+
+.solution-card {
+  background: #f0fdf4;
+  border: 1px solid #dcfce7;
+}
+
+.ps-header {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  margin-bottom: 0.85rem;
+}
+
+.ps-indicator-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+}
+
+.problem-dot {
+  background-color: #ef4444;
+}
+
+.solution-dot {
+  background-color: #10b981;
+}
+
+.ps-title {
+  font-size: 0.95rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+  color: var(--color-secondary);
+}
+
+.ps-paragraph {
+  font-size: 0.925rem;
+  color: var(--color-text-body);
+  line-height: 1.65;
+}
+
+/* Architecture & Tech Box */
+.architecture-box {
+  background: var(--color-bg-subtle);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  padding: 1.75rem;
+  margin-bottom: 2rem;
+  display: grid;
+  grid-template-columns: 1.2fr 0.8fr;
+  gap: 2rem;
+}
+
+.section-micro-label {
+  display: block;
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--color-text-muted);
+  margin-bottom: 0.5rem;
+}
+
+.arch-text {
+  font-size: 0.925rem;
+  color: var(--color-secondary);
+  line-height: 1.6;
+  font-weight: 500;
+}
+
+.tech-tags-wrap {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+}
+
+.tech-badge {
+  background: #ffffff;
+  border: 1px solid var(--color-border);
+  padding: 0.25rem 0.65rem;
+  border-radius: 6px;
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: var(--color-secondary);
+}
+
+/* Key Features Grid */
+.features-block {
+  margin-bottom: 2rem;
+}
+
+.features-heading {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.95rem;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: var(--color-secondary);
+  margin-bottom: 1rem;
+}
+
+.features-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.85rem;
+}
+
+.feature-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.6rem;
+  font-size: 0.875rem;
+  color: var(--color-text-body);
+  line-height: 1.5;
+}
+
+/* ROI Impact */
+.roi-impact-section {
+  margin-bottom: 2rem;
+}
+
+.roi-metrics-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1rem;
+  margin-top: 0.75rem;
+}
+
+.roi-box {
+  background: #f8fafc;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  padding: 1.25rem;
+  text-align: center;
+}
+
+.roi-stat {
+  font-family: var(--font-heading);
+  font-size: 1.6rem;
+  font-weight: 800;
+  color: var(--color-primary);
+  line-height: 1.1;
+}
+
+.roi-desc {
+  font-size: 0.75rem;
+  color: var(--color-text-muted);
+  line-height: 1.4;
+  margin-top: 0.35rem;
+}
+
+/* Client Quote */
+.client-quote-banner {
+  background: #eff6ff;
+  border-left: 4px solid var(--color-primary);
+  border-radius: 0 var(--radius-md) var(--radius-md) 0;
+  padding: 1.25rem 1.75rem;
+  margin-bottom: 2rem;
+}
+
+.quote-text {
+  font-style: italic;
+  font-size: 0.95rem;
+  color: var(--color-secondary);
+  line-height: 1.6;
+  margin: 0.5rem 0;
+}
+
+.quote-author-info {
+  font-size: 0.85rem;
+  color: var(--color-text-muted);
+}
+
+.author-name {
+  font-weight: 700;
+  color: var(--color-secondary);
+}
+
+/* Project Actions */
+.project-actions-footer {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+  border-top: 1px solid var(--color-border);
+  padding-top: 1.5rem;
+}
+
+/* Modal styles */
+.modal-backdrop {
+  position: fixed;
+  inset: 0;
+  background: rgba(15, 23, 42, 0.75);
+  backdrop-filter: blur(8px);
+  z-index: 2000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1.5rem;
+}
+
+.modal-dialog {
+  max-width: 800px;
+  width: 100%;
+  max-height: 90vh;
+  overflow-y: auto;
+  background: #ffffff;
+  padding: 2.5rem;
+  border-radius: var(--radius-xl);
+  box-shadow: var(--shadow-xl);
+  position: relative;
+}
+
+.modal-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  margin-bottom: 1.75rem;
+  border-bottom: 1px solid var(--color-border);
+  padding-bottom: 1.25rem;
+}
+
+.modal-badge {
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: var(--color-primary);
+  margin-bottom: 0.35rem;
+  display: inline-block;
+}
+
+.modal-title {
+  font-size: 1.5rem;
+}
+
+.modal-close-btn {
+  background: none;
+  border: 1px solid var(--color-border);
+  border-radius: 50%;
+  width: 36px;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  color: var(--color-text-muted);
+}
+
+.modal-close-btn:hover {
+  background: var(--color-bg-subtle);
+  color: var(--color-secondary);
+}
+
+.modal-body {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.blueprint-section h4,
+.blueprint-summary h4 {
+  font-size: 0.95rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: var(--color-secondary);
+  margin-bottom: 0.5rem;
+}
+
+.blueprint-summary p {
+  font-size: 0.925rem;
+  color: var(--color-text-body);
+  line-height: 1.6;
+}
+
+.blueprint-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.blueprint-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.blueprint-list li {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.5rem;
+  font-size: 0.875rem;
+}
+
+.modal-footer {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 1rem;
+  border-top: 1px solid var(--color-border);
+  padding-top: 1.25rem;
+}
+
+/* Responsiveness */
+@media (max-width: 1024px) {
+  .ps-side-grid {
+    grid-template-columns: 1fr;
+  }
+  .architecture-box {
+    grid-template-columns: 1fr;
+  }
+  .roi-metrics-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 640px) {
+  .project-header-banner {
+    padding: 2rem 1.5rem;
+  }
+  .project-content-body {
+    padding: 1.5rem;
+  }
+  .features-grid {
+    grid-template-columns: 1fr;
+  }
+  .roi-metrics-grid {
+    grid-template-columns: 1fr;
+  }
+}

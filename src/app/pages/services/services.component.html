@@ -1,0 +1,116 @@
+<!-- SERVICES HERO -->
+<section class="section section-hero services-hero-section">
+  <div class="container">
+    <div class="services-hero-content">
+      <span class="badge badge-primary">Enterprise Capabilities</span>
+      <h1 class="hero-title">
+        Full-Lifecycle <span class="gradient-text-primary">Software Engineering</span> & Architecture Services
+      </h1>
+      <p class="hero-subtitle">
+        We specialize in complex, high-concurrency software challenges. From reactive single-page applications to distributed microservices, database clusters, and cloud orchestration, we provide the technical firepower required to scale.
+      </p>
+
+      <!-- Quick Jump Links -->
+      <div class="services-quick-nav">
+        <a *ngFor="let s of services" [href]="'#service-' + s.id" class="quick-nav-pill">
+          <app-icon [name]="s.icon" [size]="15" color="#2563eb"></app-icon>
+          <span>{{ s.title.split('&')[0] }}</span>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SERVICES DEEP DIVE CONTAINER -->
+<section class="section services-details-section">
+  <div class="container">
+    <div class="services-list-wrapper">
+      <div
+        class="service-block card"
+        *ngFor="let service of services; let odd = odd"
+        [id]="'service-' + service.id"
+        [class.layout-reversed]="odd">
+
+        <!-- Left / Content Area -->
+        <div class="service-info-col">
+          <div class="service-pill-row">
+            <span class="badge badge-primary">{{ service.badge }}</span>
+            <span class="service-id-label">Pillar 0{{ services.indexOf(service) + 1 }}</span>
+          </div>
+
+          <h2 class="service-heading">{{ service.title }}</h2>
+          <p class="service-full-desc">{{ service.fullDescription }}</p>
+
+          <!-- Architectural Patterns Used -->
+          <div class="arch-patterns-box">
+            <h4 class="box-title">
+              <app-icon name="layers" [size]="16" color="#2563eb"></app-icon>
+              <span>Architectural Patterns Implemented</span>
+            </h4>
+            <div class="arch-tags">
+              <span class="arch-tag" *ngFor="let arch of service.architectures">{{ arch }}</span>
+            </div>
+          </div>
+
+          <!-- Technologies Leveraged -->
+          <div class="tech-stack-row">
+            <span class="tech-label">Primary Stack:</span>
+            <div class="tech-pills">
+              <span class="pill" *ngFor="let tech of service.technologies">{{ tech }}</span>
+            </div>
+          </div>
+
+          <!-- Direct Service CTA -->
+          <div class="service-action-row">
+            <a routerLink="/contact" [queryParams]="{ service: service.id }" class="btn btn-primary btn-sm">
+              <span>Engage on {{ service.title.split('&')[0] }}</span>
+              <app-icon name="arrow-right" [size]="14"></app-icon>
+            </a>
+            <a routerLink="/technologies" class="btn btn-secondary btn-sm">
+              <span>Explore Tech Specs</span>
+            </a>
+          </div>
+        </div>
+
+        <!-- Right / Value & Deliverables Col -->
+        <div class="service-deliverables-col">
+          <!-- KPI Highlights -->
+          <div class="kpi-banner-grid">
+            <div class="kpi-item" *ngFor="let kpi of service.kpis">
+              <span class="kpi-val">{{ kpi.value }}</span>
+              <span class="kpi-lbl">{{ kpi.label }}</span>
+            </div>
+          </div>
+
+          <!-- Deliverables Checklist -->
+          <div class="deliverables-card">
+            <h4 class="del-title">Enterprise Deliverables</h4>
+            <ul class="del-list">
+              <li *ngFor="let del of service.deliverables">
+                <app-icon name="check-circle" [size]="16" color="#10b981"></app-icon>
+                <span>{{ del }}</span>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Business Benefits & ROI -->
+          <div class="benefits-card">
+            <h4 class="del-title">Business Impact & ROI</h4>
+            <ul class="ben-list">
+              <li *ngFor="let ben of service.businessBenefits">
+                <app-icon name="zap" [size]="16" color="#2563eb"></app-icon>
+                <span>{{ ben }}</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CALL TO ACTION BANNER -->
+<app-cta-banner
+  title="Need a Custom Enterprise Architecture Assessment?"
+  subtitle="Our solutions architects analyze your existing codebase, bottlenecks, and cloud infrastructure to create a comprehensive engineering proposal.">
+</app-cta-banner>

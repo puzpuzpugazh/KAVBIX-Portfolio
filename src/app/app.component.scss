@@ -1,0 +1,11 @@
+:host {
+  display: block;
+  min-height: 100vh;
+}
+
+.main-wrapper {
+  min-height: calc(100vh - 72px);
+  padding-top: 72px; /* Accounts for fixed navbar */
+  display: flex;
+  flex-direction: column;
+}

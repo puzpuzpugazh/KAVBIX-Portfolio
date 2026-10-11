@@ -1,0 +1,262 @@
+<!-- CONTACT HERO -->
+<section class="section section-hero contact-hero-section">
+  <div class="container">
+    <div class="contact-hero-content">
+      <span class="badge badge-primary">Direct Technical Access</span>
+      <h1 class="hero-title">
+        Schedule an <span class="gradient-text-primary">Architecture Consultation</span>
+      </h1>
+      <p class="hero-subtitle">
+        Connect directly with our solutions architects to discuss technical feasibility, sprint milestones, and pricing models. We guarantee a signed mutual NDA before reviewing proprietary requirements.
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- MAIN CONTACT FORM & INFO SECTION -->
+<section class="section contact-main-section">
+  <div class="container">
+    <div class="contact-layout-grid">
+      <!-- Left Column: Direct Enterprise Contacts & Trust Commitments -->
+      <div class="contact-info-col">
+        <div class="trust-commitment-card card">
+          <span class="commit-badge">Client Commitment</span>
+          <h3 class="commit-title">What Happens After You Inquire?</h3>
+          <div class="commit-steps">
+            <div class="cstep">
+              <span class="cstep-num">1</span>
+              <div>
+                <strong>Initial Review (Within 4 Hours):</strong>
+                <p>A Senior Solutions Architect reviews your technical specifications under strict confidentiality.</p>
+              </div>
+            </div>
+            <div class="cstep">
+              <span class="cstep-num">2</span>
+              <div>
+                <strong>30-Min Exploratory Call:</strong>
+                <p>We clarify architectural boundaries, domain complexities, and anticipated throughput scale.</p>
+              </div>
+            </div>
+            <div class="cstep">
+              <span class="cstep-num">3</span>
+              <div>
+                <strong>Formal RFP & Milestone Proposal:</strong>
+                <p>You receive a detailed technical blueprint, technology matrix, and fixed-price sprint breakdown.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Contact Detail Cards -->
+        <div class="contact-direct-boxes">
+          <div class="direct-box card">
+            <div class="dbox-icon">
+              <app-icon name="mail" [size]="20" color="#2563eb"></app-icon>
+            </div>
+            <div>
+              <span class="dbox-label">Direct Technical Inquiries:</span>
+              <a href="mailto:contact@kavbix.com" class="dbox-val">contact&#64;kavbix.com</a>
+            </div>
+          </div>
+
+          <div class="direct-box card">
+            <div class="dbox-icon">
+              <app-icon name="phone" [size]="20" color="#2563eb"></app-icon>
+            </div>
+            <div>
+              <span class="dbox-label">Direct Client Advisory Line:</span>
+              <a href="tel:+919876543210" class="dbox-val">+91 98765 43210</a>
+            </div>
+          </div>
+
+          <div class="direct-box card">
+            <div class="dbox-icon">
+              <app-icon name="map-pin" [size]="20" color="#2563eb"></app-icon>
+            </div>
+            <div>
+              <span class="dbox-label">Headquarters & Delivery Center:</span>
+              <p class="dbox-val">Tech Park, Outer Ring Road, Bengaluru, India (Global Remote Pods)</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="nda-security-callout">
+          <app-icon name="shield" [size]="18" color="#10b981"></app-icon>
+          <span>All inquiries are protected by standard mutual Non-Disclosure Agreements (NDA).</span>
+        </div>
+      </div>
+
+      <!-- Right Column: Interactive Project Inquiry Form -->
+      <div class="contact-form-col">
+        <!-- Form Container -->
+        <div class="inquiry-form-card card" *ngIf="!isSubmitted">
+          <div class="form-header">
+            <h2 class="form-title">Submit Technical Request for Proposal (RFP)</h2>
+            <p class="form-desc">Provide details regarding your upcoming project, migration, or engineering pod needs.</p>
+          </div>
+
+          <form (ngSubmit)="submitInquiry()" #inquiryForm="ngForm" class="inquiry-form">
+            <!-- Full Name & Work Email -->
+            <div class="form-row-2">
+              <div class="form-group">
+                <label for="fullName">Your Full Name <span class="req">*</span></label>
+                <input
+                  type="text"
+                  id="fullName"
+                  name="fullName"
+                  [(ngModel)]="formData.fullName"
+                  required
+                  placeholder="e.g. Johnathan Vance"
+                  class="form-control" />
+              </div>
+
+              <div class="form-group">
+                <label for="workEmail">Work Email Address <span class="req">*</span></label>
+                <input
+                  type="email"
+                  id="workEmail"
+                  name="workEmail"
+                  [(ngModel)]="formData.workEmail"
+                  required
+                  placeholder="e.g. j.vance@company.com"
+                  class="form-control" />
+              </div>
+            </div>
+
+            <!-- Company Name & Phone -->
+            <div class="form-row-2">
+              <div class="form-group">
+                <label for="companyName">Company / Project Name</label>
+                <input
+                  type="text"
+                  id="companyName"
+                  name="companyName"
+                  [(ngModel)]="formData.companyName"
+                  placeholder="e.g. Acme FinTech Corp"
+                  class="form-control" />
+              </div>
+
+              <div class="form-group">
+                <label for="phoneNumber">Direct Telephone (Optional)</label>
+                <input
+                  type="tel"
+                  id="phoneNumber"
+                  name="phoneNumber"
+                  [(ngModel)]="formData.phoneNumber"
+                  placeholder="e.g. +1 (555) 019-2834"
+                  class="form-control" />
+              </div>
+            </div>
+
+            <!-- Services Needed Multi-Select -->
+            <div class="form-group">
+              <label>Engineering Capabilities Required</label>
+              <div class="services-toggle-grid">
+                <button
+                  type="button"
+                  class="service-toggle-btn"
+                  *ngFor="let s of availableServices"
+                  [class.selected]="s.selected"
+                  (click)="toggleService(s)">
+                  <app-icon [name]="s.selected ? 'check-circle' : 'layers'" [size]="14"></app-icon>
+                  <span>{{ s.name }}</span>
+                </button>
+              </div>
+            </div>
+
+            <!-- Budget & Timeline Selectors -->
+            <div class="form-row-2">
+              <div class="form-group">
+                <label for="projectBudget">Estimated Project Budget</label>
+                <select id="projectBudget" name="projectBudget" [(ngModel)]="formData.projectBudget" class="form-control">
+                  <option *ngFor="let b of budgetOptions" [value]="b">{{ b }}</option>
+                </select>
+              </div>
+
+              <div class="form-group">
+                <label for="timeline">Target Delivery Timeline</label>
+                <select id="timeline" name="timeline" [(ngModel)]="formData.timeline" class="form-control">
+                  <option *ngFor="let t of timelineOptions" [value]="t">{{ t }}</option>
+                </select>
+              </div>
+            </div>
+
+            <!-- Project Requirements Textarea -->
+            <div class="form-group">
+              <label for="projectDescription">Project Scope & Technical Requirements <span class="req">*</span></label>
+              <textarea
+                id="projectDescription"
+                name="projectDescription"
+                [(ngModel)]="formData.projectDescription"
+                required
+                rows="4"
+                placeholder="Briefly describe the business problem, target concurrency, legacy migration needs, or preferred architecture stack..."
+                class="form-control"></textarea>
+            </div>
+
+            <!-- Submit Button -->
+            <div class="form-submit-row">
+              <button
+                type="submit"
+                class="btn btn-primary btn-lg submit-btn"
+                [disabled]="isSubmitting">
+                <span *ngIf="!isSubmitting">Submit RFP & Request Consultation</span>
+                <span *ngIf="isSubmitting">Processing RFP Ticket...</span>
+                <app-icon [name]="isSubmitting ? 'clock' : 'arrow-right'" [size]="18"></app-icon>
+              </button>
+            </div>
+          </form>
+        </div>
+
+        <!-- Success Feedback Card -->
+        <div class="success-ticket-card card" *ngIf="isSubmitted">
+          <div class="success-icon-wrap">
+            <app-icon name="check-circle" [size]="48" color="#10b981"></app-icon>
+          </div>
+          <span class="ticket-status-pill">RFP Ticket Confirmed</span>
+          <h2 class="ticket-title">Technical Inquiry Successfully Queued!</h2>
+          <p class="ticket-desc">
+            Thank you, <strong>{{ formData.fullName }}</strong>. Your inquiry has been routed to our Lead Enterprise Solutions Architect under ticket reference:
+          </p>
+
+          <div class="ticket-code-box">
+            <span class="tcode-lbl">RFP Tracking Number:</span>
+            <span class="tcode-num">{{ generatedTicketNumber }}</span>
+          </div>
+
+          <div class="ticket-timeline-info">
+            <div class="tinfo-item">
+              <app-icon name="clock" [size]="16" color="#2563eb"></app-icon>
+              <span>Estimated First Contact: <strong>Within 4 Business Hours</strong></span>
+            </div>
+            <div class="tinfo-item">
+              <app-icon name="mail" [size]="16" color="#2563eb"></app-icon>
+              <span>Confirmation sent to: <strong>{{ formData.workEmail }}</strong></span>
+            </div>
+          </div>
+
+          <div class="ticket-actions">
+            <button type="button" class="btn btn-secondary btn-sm" (click)="resetForm()">
+              <span>Submit Another Inquiry</span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FREQUENTLY ASKED QUESTIONS SECTION -->
+<section class="section section-subtle contact-faq-section">
+  <div class="container">
+    <div class="section-header">
+      <span class="badge badge-primary">Procurement Details</span>
+      <h2 class="section-title">Common Procurement & Contracting Questions</h2>
+      <p class="section-subtitle">
+        Everything you need to know about our contracting, confidentiality, and technical onboarding process.
+      </p>
+    </div>
+
+    <app-faq-accordion [showCategories]="false"></app-faq-accordion>
+  </div>
+</section>

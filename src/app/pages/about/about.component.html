@@ -1,0 +1,156 @@
+<!-- ABOUT HERO -->
+<section class="section section-hero about-hero-section">
+  <div class="container">
+    <div class="about-hero-content">
+      <span class="badge badge-primary">Engineering Pedigree</span>
+      <h1 class="hero-title">
+        Built by Engineers Who Prioritize <span class="gradient-text-primary">Reliability Over Hype</span>
+      </h1>
+      <p class="hero-subtitle">
+        Kavbix Technologies was founded to solve a glaring problem in the software consulting industry: the prevalence of superficial agencies that deliver fragile codebases unable to survive real-world enterprise traffic.
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- VISION & MISSION -->
+<section class="section vision-mission-section">
+  <div class="container">
+    <div class="grid-2 vision-mission-grid">
+      <div class="vm-card card">
+        <div class="vm-icon-box">
+          <app-icon name="sparkles" [size]="28" color="#2563eb"></app-icon>
+        </div>
+        <span class="vm-badge">Our North Star</span>
+        <h2 class="vm-title">Our Vision</h2>
+        <p class="vm-text">
+          To become the most trusted technical partner for tech-forward companies globally—recognized for engineering software systems that effortlessly handle hyper-growth, maintain 99.99% operational availability, and stand as pillars of reliability for decades.
+        </p>
+      </div>
+
+      <div class="vm-card card">
+        <div class="vm-icon-box">
+          <app-icon name="award" [size]="28" color="#10b981"></app-icon>
+        </div>
+        <span class="vm-badge">Our Daily Mission</span>
+        <h2 class="vm-title">Our Mission</h2>
+        <p class="vm-text">
+          To empower engineering leaders and visionary founders with senior architectural guidance, strictly typed code, automated cloud pipelines, and transparent two-week delivery cycles that eliminate technical risk and maximize enterprise valuation.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- DEVELOPMENT PHILOSOPHY -->
+<section class="section section-subtle philosophy-section">
+  <div class="container">
+    <div class="section-header">
+      <span class="badge badge-primary">Architectural Tenets</span>
+      <h2 class="section-title">Our Development Philosophy</h2>
+      <p class="section-subtitle">
+        Software is an investment that should compound in value, not decay into an unmaintainable legacy burden. We abide by four non-negotiable principles.
+      </p>
+    </div>
+
+    <div class="grid-2 philosophy-grid">
+      <div class="philo-card card" *ngFor="let p of corePrinciples; let i = index">
+        <div class="philo-num">0{{ i + 1 }}</div>
+        <h3 class="philo-title">{{ p.title }}</h3>
+        <p class="philo-desc">{{ p.desc }}</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- LEADERSHIP & TEAM EXPERTISE -->
+<section class="section leadership-section">
+  <div class="container">
+    <div class="section-header">
+      <span class="badge badge-primary">Technical Depth</span>
+      <h2 class="section-title">Our Architectural Leadership</h2>
+      <p class="section-subtitle">
+        Every project at Kavbix is directly led by seasoned practitioners with deep backgrounds in high-concurrency systems and distributed cloud deployments.
+      </p>
+    </div>
+
+    <div class="grid-2 leadership-grid">
+      <div class="lead-card card" *ngFor="let leader of leadershipRoles">
+        <div class="lead-top">
+          <div class="lead-avatar-icon">
+            <app-icon name="users" [size]="24" color="#2563eb"></app-icon>
+          </div>
+          <div>
+            <h3 class="lead-title">{{ leader.title }}</h3>
+            <span class="lead-exp">{{ leader.experience }}</span>
+          </div>
+        </div>
+
+        <p class="lead-focus"><strong>Domain Focus:</strong> {{ leader.focus }}</p>
+
+        <div class="lead-credentials">
+          <span class="cred-title">Verified Core Competencies:</span>
+          <ul>
+            <li *ngFor="let cred of leader.credentials">
+              <app-icon name="check" [size]="14" color="#10b981"></app-icon>
+              <span>{{ cred }}</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ENGINEERING STANDARDS & GUARANTEES -->
+<section class="section section-dark standards-section">
+  <div class="container">
+    <div class="section-header">
+      <span class="badge badge-dark">Zero Compromise</span>
+      <h2 class="section-title">Enterprise Guarantees We Put in Writing</h2>
+      <p class="section-subtitle">
+        We formalize our quality and delivery commitments in every Master Services Agreement (MSA).
+      </p>
+    </div>
+
+    <div class="grid-4 standards-grid">
+      <div class="standard-card card-dark">
+        <div class="std-icon">
+          <app-icon name="shield" [size]="28" color="#38bdf8"></app-icon>
+        </div>
+        <h4 class="std-title">100% IP & Repo Ownership</h4>
+        <p class="std-desc">Full legal assignment of all code, git history, diagrams, and assets transferred immediately upon sprint completion.</p>
+      </div>
+
+      <div class="standard-card card-dark">
+        <div class="std-icon">
+          <app-icon name="check-circle" [size]="28" color="#10b981"></app-icon>
+        </div>
+        <h4 class="std-title">OWASP Top 10 Security Audit</h4>
+        <p class="std-desc">Guaranteed zero high-severity security vulnerabilities cleared before any production deployment go-live.</p>
+      </div>
+
+      <div class="standard-card card-dark">
+        <div class="std-icon">
+          <app-icon name="clock" [size]="28" color="#38bdf8"></app-icon>
+        </div>
+        <h4 class="std-title">99.99% SLA Uptime Standard</h4>
+        <p class="std-desc">Infrastructure architectures engineered with multi-AZ redundancy and automated failover capabilities.</p>
+      </div>
+
+      <div class="standard-card card-dark">
+        <div class="std-icon">
+          <app-icon name="zap" [size]="28" color="#f59e0b"></app-icon>
+        </div>
+        <h4 class="std-title">Zero Vendor Lock-In</h4>
+        <p class="std-desc">Clean OpenAPI specs, standard Dockerfiles, and standard frameworks allowing any developer to onboard seamlessly.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA BANNER -->
+<app-cta-banner
+  title="Ready to Partner with an Elite Technical Pod?"
+  subtitle="Speak directly with our senior architects to evaluate your technical roadmap and kick off your development sprint.">
+</app-cta-banner>

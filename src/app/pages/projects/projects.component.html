@@ -1,0 +1,196 @@
+<!-- PROJECTS HERO -->
+<section class="section section-hero projects-hero-section">
+  <div class="container">
+    <div class="projects-hero-content">
+      <span class="badge badge-primary">Proven Enterprise Results</span>
+      <h1 class="hero-title">
+        Production Systems <span class="gradient-text-primary">Case Studies</span>
+      </h1>
+      <p class="hero-subtitle">
+        Explore real-world software platforms engineered by Kavbix. Each case study details the technical challenge, our architectural design, tech stack decisions, key features, and audited business ROI.
+      </p>
+
+      <!-- Category Filter Tabs -->
+      <div class="projects-filter-pills">
+        <button
+          type="button"
+          class="cat-filter-btn"
+          *ngFor="let cat of categories"
+          [class.active]="selectedCategory === cat"
+          (click)="setCategory(cat)">
+          {{ cat }}
+        </button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PROJECTS LIST CONTAINER -->
+<section class="section projects-list-section">
+  <div class="container">
+    <div class="projects-vertical-flow">
+      <article
+        class="project-detail-card card"
+        *ngFor="let project of filteredProjects"
+        [id]="project.id">
+
+        <!-- Top Banner Header -->
+        <div class="project-header-banner" [style.background]="project.bannerGradient">
+          <div class="banner-meta">
+            <span class="meta-tag">{{ project.industry }}</span>
+            <span class="meta-tag client-tag">{{ project.clientType }}</span>
+          </div>
+          <h2 class="project-headline">{{ project.title }}</h2>
+          <p class="project-tagline-text">{{ project.tagline }}</p>
+        </div>
+
+        <div class="project-content-body">
+          <!-- Problem & Solution Grid -->
+          <div class="ps-side-grid">
+            <div class="ps-card problem-card">
+              <div class="ps-header">
+                <div class="ps-indicator-dot problem-dot"></div>
+                <h3 class="ps-title">The Challenge & Problem Statement</h3>
+              </div>
+              <p class="ps-paragraph">{{ project.problemStatement }}</p>
+            </div>
+
+            <div class="ps-card solution-card">
+              <div class="ps-header">
+                <div class="ps-indicator-dot solution-dot"></div>
+                <h3 class="ps-title">Architectural Solution Implemented</h3>
+              </div>
+              <p class="ps-paragraph">{{ project.solutionImplemented }}</p>
+            </div>
+          </div>
+
+          <!-- Architecture & Technologies -->
+          <div class="architecture-box">
+            <div class="arch-col">
+              <span class="section-micro-label">Architecture Paradigm:</span>
+              <p class="arch-text">{{ project.architectureUsed }}</p>
+            </div>
+            <div class="tech-col">
+              <span class="section-micro-label">Technologies Leveraged:</span>
+              <div class="tech-tags-wrap">
+                <span class="tech-badge" *ngFor="let t of project.technologiesUsed">{{ t }}</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Key System Features -->
+          <div class="features-block">
+            <h4 class="features-heading">
+              <app-icon name="check-circle" [size]="16" color="#2563eb"></app-icon>
+              <span>Key Technical Features Delivered</span>
+            </h4>
+            <div class="features-grid">
+              <div class="feature-item" *ngFor="let feat of project.keyFeatures">
+                <app-icon name="check" [size]="14" color="#10b981"></app-icon>
+                <span>{{ feat }}</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Business Impact / Verified ROI -->
+          <div class="roi-impact-section">
+            <span class="section-micro-label">Audited Business Impact & ROI:</span>
+            <div class="roi-metrics-grid">
+              <div class="roi-box" *ngFor="let imp of project.businessImpact">
+                <div class="roi-stat">{{ imp.metric }}</div>
+                <div class="roi-desc">{{ imp.description }}</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Testimonial Quote if present -->
+          <div class="client-quote-banner" *ngIf="project.testimonialQuote">
+            <app-icon name="star" [size]="18" color="#f59e0b"></app-icon>
+            <p class="quote-text">"{{ project.testimonialQuote.quote }}"</p>
+            <div class="quote-author-info">
+              <span class="author-name">{{ project.testimonialQuote.author }}</span>
+              <span class="author-role">&mdash; {{ project.testimonialQuote.role }}</span>
+            </div>
+          </div>
+
+          <!-- Footer Actions -->
+          <div class="project-actions-footer">
+            <button type="button" class="btn btn-secondary btn-sm" (click)="openModal(project)">
+              <span>Inspect Architecture Blueprint</span>
+              <app-icon name="layers" [size]="14"></app-icon>
+            </button>
+            <a routerLink="/contact" class="btn btn-primary btn-sm">
+              <span>Discuss a Similar Project</span>
+              <app-icon name="arrow-right" [size]="14"></app-icon>
+            </a>
+          </div>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- MODAL POPUP FOR ARCHITECTURE DEEP DIVE -->
+<div class="modal-backdrop" *ngIf="activeProjectModal" (click)="closeModal()">
+  <div class="modal-dialog card" (click)="$event.stopPropagation()">
+    <div class="modal-header">
+      <div>
+        <span class="modal-badge">{{ activeProjectModal.industry }}</span>
+        <h3 class="modal-title">{{ activeProjectModal.title }}</h3>
+      </div>
+      <button type="button" class="modal-close-btn" (click)="closeModal()" aria-label="Close modal">
+        <app-icon name="x" [size]="20"></app-icon>
+      </button>
+    </div>
+
+    <div class="modal-body">
+      <div class="blueprint-summary">
+        <h4>System Architecture Blueprint</h4>
+        <p>{{ activeProjectModal.architectureUsed }}</p>
+      </div>
+
+      <div class="blueprint-section">
+        <h4>Core Enterprise Technologies</h4>
+        <div class="blueprint-tags">
+          <span class="tech-badge" *ngFor="let t of activeProjectModal.technologiesUsed">{{ t }}</span>
+        </div>
+      </div>
+
+      <div class="blueprint-section">
+        <h4>Key Engineering Features</h4>
+        <ul class="blueprint-list">
+          <li *ngFor="let f of activeProjectModal.keyFeatures">
+            <app-icon name="check" [size]="14" color="#10b981"></app-icon>
+            <span>{{ f }}</span>
+          </li>
+        </ul>
+      </div>
+
+      <div class="blueprint-section">
+        <h4>Measurable Business Impact</h4>
+        <div class="roi-metrics-grid">
+          <div class="roi-box" *ngFor="let imp of activeProjectModal.businessImpact">
+            <div class="roi-stat">{{ imp.metric }}</div>
+            <div class="roi-desc">{{ imp.description }}</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="modal-footer">
+      <a routerLink="/contact" (click)="closeModal()" class="btn btn-primary btn-sm">
+        <span>Request Technical Proposal</span>
+        <app-icon name="arrow-right" [size]="14"></app-icon>
+      </a>
+      <button type="button" class="btn btn-secondary btn-sm" (click)="closeModal()">
+        <span>Close Blueprint</span>
+      </button>
+    </div>
+  </div>
+</div>
+
+<!-- CTA BANNER -->
+<app-cta-banner
+  title="Have a Complex System You Need Built or Scaled?"
+  subtitle="Book a technical discovery session with our senior architects. We evaluate your requirements and provide a detailed architectural specification.">
+</app-cta-banner>

@@ -1,0 +1,164 @@
+<!-- TECHNOLOGIES HERO -->
+<section class="section section-hero tech-hero-section">
+  <div class="container">
+    <div class="tech-hero-content">
+      <span class="badge badge-primary">Battle-Tested Standards</span>
+      <h1 class="hero-title">
+        The <span class="gradient-text-primary">Enterprise Technology</span> Stack
+      </h1>
+      <p class="hero-subtitle">
+        We do not experiment with your core business on unstable hype-cycle frameworks. We build exclusively with proven, type-safe, LTS-backed enterprise technologies engineered for 10-year durability, sub-second latency, and zero memory leaks.
+      </p>
+
+      <!-- Category Tabs -->
+      <div class="tech-filter-pills">
+        <button
+          type="button"
+          class="cat-filter-btn"
+          *ngFor="let cat of categories"
+          [class.active]="selectedCategory === cat"
+          (click)="setCategory(cat)">
+          {{ cat }}
+        </button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TECHNOLOGIES DETAILED CARDS -->
+<section class="section tech-grid-section">
+  <div class="container">
+    <div class="tech-cards-container">
+      <div class="tech-detail-card card" *ngFor="let tech of filteredTechnologies" [id]="tech.id">
+        <!-- Card Top Bar -->
+        <div class="card-top-bar">
+          <div class="tech-identity">
+            <div class="tech-icon-box">
+              <app-icon [name]="tech.icon" [size]="32" color="#2563eb"></app-icon>
+            </div>
+            <div>
+              <div class="tech-name-row">
+                <h2 class="tech-card-name">{{ tech.name }}</h2>
+                <span class="lts-badge">{{ tech.versionLts }}</span>
+              </div>
+              <span class="category-indicator">{{ tech.category }}</span>
+            </div>
+          </div>
+          <div class="spec-highlight">
+            <span class="spec-label">Production Spec</span>
+            <span class="spec-val">{{ tech.productionMetrics }}</span>
+          </div>
+        </div>
+
+        <p class="tech-tagline-text">{{ tech.tagline }}</p>
+        <p class="tech-body-desc">{{ tech.description }}</p>
+
+        <!-- Two Column Deep Dive -->
+        <div class="tech-columns-grid">
+          <!-- Capabilities -->
+          <div class="column-box">
+            <h4 class="col-heading">
+              <app-icon name="check-circle" [size]="15" color="#10b981"></app-icon>
+              <span>Core Architectural Capabilities</span>
+            </h4>
+            <ul class="col-checklist">
+              <li *ngFor="let cap of tech.coreCapabilities">
+                <app-icon name="check" [size]="13" color="#10b981"></app-icon>
+                <span>{{ cap }}</span>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Enterprise Use Cases -->
+          <div class="column-box">
+            <h4 class="col-heading">
+              <app-icon name="shield" [size]="15" color="#2563eb"></app-icon>
+              <span>Enterprise Application Scenarios</span>
+            </h4>
+            <ul class="col-checklist">
+              <li *ngFor="let uc of tech.enterpriseUseCases">
+                <app-icon name="arrow-right" [size]="13" color="#2563eb"></app-icon>
+                <span>{{ uc }}</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Role in Architecture -->
+        <div class="arch-role-box">
+          <span class="role-label">System Role:</span>
+          <span class="role-desc">{{ tech.architectureRole }}</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ENTERPRISE STACK SYNERGY MATRIX -->
+<section class="section section-dark stack-synergy-section">
+  <div class="container">
+    <div class="section-header">
+      <span class="badge badge-dark">Unified Ecosystem</span>
+      <h2 class="section-title">How Our Stack Interoperates at Scale</h2>
+      <p class="section-subtitle">
+        Each tier of our technology stack is designed to complement the other, eliminating impedance mismatches and maximizing end-to-end performance.
+      </p>
+    </div>
+
+    <div class="synergy-grid">
+      <div class="synergy-card card-dark">
+        <div class="synergy-step">01. Presentation Tier</div>
+        <h3 class="synergy-title">Angular & React Micro-Frontends</h3>
+        <p class="synergy-desc">
+          Strict TypeScript contracts, reactive Signals state, and accessible design system tokens communicating over typed HTTP interceptors.
+        </p>
+        <div class="synergy-metric">Sub-second paint & 100% WCAG AA</div>
+      </div>
+
+      <div class="synergy-arrow">
+        <app-icon name="arrow-right" [size]="20" color="#38bdf8"></app-icon>
+      </div>
+
+      <div class="synergy-card card-dark">
+        <div class="synergy-step">02. Application Tier</div>
+        <h3 class="synergy-title">Java 21 & Spring Boot 3 Engine</h3>
+        <p class="synergy-desc">
+          Virtual threads, asynchronous Kafka event brokers, declarative JPA transactions, and OAuth2 resource server authorization.
+        </p>
+        <div class="synergy-metric">25,000+ TPS throughput</div>
+      </div>
+
+      <div class="synergy-arrow">
+        <app-icon name="arrow-right" [size]="20" color="#38bdf8"></app-icon>
+      </div>
+
+      <div class="synergy-card card-dark">
+        <div class="synergy-step">03. Persistence Tier</div>
+        <h3 class="synergy-title">PostgreSQL & MySQL Clusters</h3>
+        <p class="synergy-desc">
+          ACID-compliant storage, read/write replica routing, connection pooling via HikariCP, and Redis multi-level caching.
+        </p>
+        <div class="synergy-metric">P99 query time &lt; 8ms</div>
+      </div>
+
+      <div class="synergy-arrow">
+        <app-icon name="arrow-right" [size]="20" color="#38bdf8"></app-icon>
+      </div>
+
+      <div class="synergy-card card-dark">
+        <div class="synergy-step">04. Cloud Runtime Tier</div>
+        <h3 class="synergy-title">Docker on AWS / Azure</h3>
+        <p class="synergy-desc">
+          Immutable multi-stage container builds, automated GitOps CI/CD pipelines, multi-AZ failovers, and 24/7 telemetry monitoring.
+        </p>
+        <div class="synergy-metric">99.99% infrastructure uptime</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA BANNER -->
+<app-cta-banner
+  title="Need an Architecture Review of Your Current Stack?"
+  subtitle="Our architects will audit your current codebase, detect concurrency or memory bottlenecks, and recommend high-impact modernizations.">
+</app-cta-banner>

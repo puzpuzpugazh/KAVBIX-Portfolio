@@ -1,0 +1,521 @@
+<!-- HERO SECTION -->
+<section class="hero-section">
+  <div class="hero-bg-glow"></div>
+  <div class="hero-grid-pattern"></div>
+
+  <div class="container hero-container">
+    <div class="hero-content">
+      <!-- Live Status Pill -->
+      <div class="hero-pill-badge">
+        <span class="pulse-dot"></span>
+        <span class="badge-text">Enterprise Software Consulting & Engineering Pods</span>
+        <span class="badge-sub">Accepting Q2/Q3 Projects</span>
+      </div>
+
+      <!-- Main Headline -->
+      <h1 class="hero-title">
+        We Engineer <span class="gradient-text-primary">Scalable Enterprise Software</span> & Cloud-Native Systems.
+      </h1>
+
+      <!-- Value Subtitle -->
+      <p class="hero-subtitle">
+        Kavbix Technologies delivers mission-critical web applications, resilient Spring Boot microservices, high-throughput database architectures, and automated cloud infrastructure for ambitious startups and global enterprises.
+      </p>
+
+      <!-- Primary Action Buttons -->
+      <div class="hero-cta-group">
+        <a routerLink="/contact" class="btn btn-primary btn-lg">
+          <span>Schedule Technical Consultation</span>
+          <app-icon name="arrow-right" [size]="18"></app-icon>
+        </a>
+        <a routerLink="/projects" class="btn btn-secondary btn-lg">
+          <span>Explore Production Case Studies</span>
+          <app-icon name="external-link" [size]="16"></app-icon>
+        </a>
+      </div>
+
+      <!-- Social Proof / Metrics Row -->
+      <div class="hero-metrics-bar">
+        <div class="metric-item">
+          <div class="metric-number">99.99%</div>
+          <div class="metric-label">Uptime Architecture SLA</div>
+        </div>
+        <div class="metric-divider"></div>
+        <div class="metric-item">
+          <div class="metric-number">25k+</div>
+          <div class="metric-label">Peak TPS Handled</div>
+        </div>
+        <div class="metric-divider"></div>
+        <div class="metric-item">
+          <div class="metric-number">100%</div>
+          <div class="metric-label">IP & Code Ownership</div>
+        </div>
+        <div class="metric-divider"></div>
+        <div class="metric-item">
+          <div class="metric-number">14+ Days</div>
+          <div class="metric-label">Rapid MVP Delivery</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Tech Stack Pill Ribbon -->
+    <div class="hero-tech-ribbon">
+      <span class="ribbon-label">Core Tech Stack:</span>
+      <div class="ribbon-chips">
+        <span class="tech-chip"><app-icon name="angular" [size]="15" color="#dd0031"></app-icon> Angular</span>
+        <span class="tech-chip"><app-icon name="react" [size]="15" color="#00d8ff"></app-icon> React</span>
+        <span class="tech-chip"><app-icon name="java" [size]="15" color="#ea2d2e"></app-icon> Java 21</span>
+        <span class="tech-chip"><app-icon name="spring" [size]="15" color="#6db33f"></app-icon> Spring Boot 3</span>
+        <span class="tech-chip"><app-icon name="postgresql" [size]="15" color="#336791"></app-icon> PostgreSQL</span>
+        <span class="tech-chip"><app-icon name="mysql" [size]="15" color="#00758f"></app-icon> MySQL</span>
+        <span class="tech-chip"><app-icon name="docker" [size]="15" color="#2496ed"></app-icon> Docker</span>
+        <span class="tech-chip"><app-icon name="aws" [size]="15" color="#ff9900"></app-icon> AWS</span>
+        <span class="tech-chip"><app-icon name="azure" [size]="15" color="#0089d6"></app-icon> Azure</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- COMPANY INTRODUCTION & CAPABILITY PILLARS -->
+<section class="section intro-section">
+  <div class="container">
+    <div class="section-header">
+      <span class="badge badge-primary">Engineering Leadership</span>
+      <h2 class="section-title">The Engineering Partner for High-Stakes Software</h2>
+      <p class="section-subtitle">
+        We bridge the gap between creative product vision and rock-solid enterprise architecture. No spaghetti code, no fragile shortcuts—only production-grade software engineered for decade-long reliability.
+      </p>
+    </div>
+
+    <div class="grid-3 intro-pillars-grid">
+      <div class="pillar-card card">
+        <div class="pillar-icon-box">
+          <app-icon name="cpu" [size]="28" color="#2563eb"></app-icon>
+        </div>
+        <h3 class="pillar-title">Architectural Discipline</h3>
+        <p class="pillar-desc">
+          We adopt Domain-Driven Design (DDD), Clean/Hexagonal architectures, and strict modular boundaries to guarantee that your software scales without degrading developer velocity.
+        </p>
+        <ul class="pillar-checks">
+          <li><app-icon name="check" [size]="14" color="#10b981"></app-icon> Zero monolith entanglement</li>
+          <li><app-icon name="check" [size]="14" color="#10b981"></app-icon> Strict type safety across full stack</li>
+          <li><app-icon name="check" [size]="14" color="#10b981"></app-icon> Modular component design systems</li>
+        </ul>
+      </div>
+
+      <div class="pillar-card card">
+        <div class="pillar-icon-box">
+          <app-icon name="shield" [size]="28" color="#2563eb"></app-icon>
+        </div>
+        <h3 class="pillar-title">Bank-Grade Security</h3>
+        <p class="pillar-desc">
+          Every line of code is scrutinized against OWASP Top 10 vulnerabilities. We enforce role-based access control, cryptographic hashing, and automated security vulnerability checks in CI/CD.
+        </p>
+        <ul class="pillar-checks">
+          <li><app-icon name="check" [size]="14" color="#10b981"></app-icon> OAuth2 / OIDC token governance</li>
+          <li><app-icon name="check" [size]="14" color="#10b981"></app-icon> AES-256 data encryption standards</li>
+          <li><app-icon name="check" [size]="14" color="#10b981"></app-icon> SOC2 & HIPAA compliant practices</li>
+        </ul>
+      </div>
+
+      <div class="pillar-card card">
+        <div class="pillar-icon-box">
+          <app-icon name="zap" [size]="28" color="#2563eb"></app-icon>
+        </div>
+        <h3 class="pillar-title">High-Velocity Delivery</h3>
+        <p class="pillar-desc">
+          Automated deployment pipelines and containerized testing suites enable our pods to ship features in continuous two-week sprints with guaranteed zero production downtime.
+        </p>
+        <ul class="pillar-checks">
+          <li><app-icon name="check" [size]="14" color="#10b981"></app-icon> Bi-weekly demonstrable increments</li>
+          <li><app-icon name="check" [size]="14" color="#10b981"></app-icon> Automated CI/CD with Docker & GitHub</li>
+          <li><app-icon name="check" [size]="14" color="#10b981"></app-icon> Sub-60s automated rollbacks</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CORE SERVICES OVERVIEW -->
+<section class="section section-subtle services-section">
+  <div class="container">
+    <div class="section-header">
+      <span class="badge badge-primary">Comprehensive Offerings</span>
+      <h2 class="section-title">End-to-End Enterprise Software Capabilities</h2>
+      <p class="section-subtitle">
+        From reactive user interfaces to distributed backend microservices and automated cloud infrastructure, we deliver complete solutions tailored to your business model.
+      </p>
+    </div>
+
+    <div class="grid-3 services-grid">
+      <div class="service-preview-card card" *ngFor="let service of services">
+        <div class="service-top-row">
+          <div class="service-icon-box">
+            <app-icon [name]="service.icon" [size]="24" color="#2563eb"></app-icon>
+          </div>
+          <span class="service-badge">{{ service.badge }}</span>
+        </div>
+
+        <h3 class="service-card-title">{{ service.title }}</h3>
+        <p class="service-card-desc">{{ service.shortDescription }}</p>
+
+        <div class="service-tech-tags">
+          <span class="tag-chip" *ngFor="let tech of service.technologies.slice(0, 3)">{{ tech }}</span>
+        </div>
+
+        <div class="service-kpi-row">
+          <div class="kpi-block" *ngFor="let kpi of service.kpis">
+            <span class="kpi-num">{{ kpi.value }}</span>
+            <span class="kpi-txt">{{ kpi.label }}</span>
+          </div>
+        </div>
+
+        <div class="service-footer-link">
+          <a routerLink="/services" [fragment]="service.id" class="read-more-link">
+            <span>Explore Architecture Details</span>
+            <app-icon name="arrow-right" [size]="15"></app-icon>
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <div class="services-cta-center">
+      <a routerLink="/services" class="btn btn-secondary btn-lg">
+        <span>View Complete Services & Architectural Specifications</span>
+        <app-icon name="arrow-right" [size]="16"></app-icon>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- WHY CHOOSE US / COMPARISON TO OTHERS -->
+<section class="section why-choose-section">
+  <div class="container">
+    <div class="section-header">
+      <span class="badge badge-primary">Competitive Advantage</span>
+      <h2 class="section-title">Why Tech Leaders Choose Kavbix Over Typical Agencies</h2>
+      <p class="section-subtitle">
+        Most agencies churn out superficial templates that collapse under enterprise traffic. We engineer resilient systems built on battle-tested enterprise technologies.
+      </p>
+    </div>
+
+    <div class="why-us-grid">
+      <div class="advantage-card">
+        <div class="advantage-header">
+          <div class="adv-number">01</div>
+          <app-icon name="award" [size]="24" color="#2563eb"></app-icon>
+        </div>
+        <h4 class="adv-title">Senior Architects on Every Project</h4>
+        <p class="adv-desc">
+          Your project is architected and overseen by veteran engineers with 10+ years of enterprise experience, not handed off to junior interns.
+        </p>
+      </div>
+
+      <div class="advantage-card">
+        <div class="advantage-header">
+          <div class="adv-number">02</div>
+          <app-icon name="check-circle" [size]="24" color="#10b981"></app-icon>
+        </div>
+        <h4 class="adv-title">Zero Monolithic Technical Debt</h4>
+        <p class="adv-desc">
+          We write strictly typed, well-documented code with comprehensive automated tests and domain boundaries so your team can maintain it effortlessly.
+        </p>
+      </div>
+
+      <div class="advantage-card">
+        <div class="advantage-header">
+          <div class="adv-number">03</div>
+          <app-icon name="shield" [size]="24" color="#2563eb"></app-icon>
+        </div>
+        <h4 class="adv-title">100% Unconditional IP Transfer</h4>
+        <p class="adv-desc">
+          You retain complete legal ownership of all intellectual property, source repositories, secrets, and architecture documentation with zero royalties.
+        </p>
+      </div>
+
+      <div class="advantage-card">
+        <div class="advantage-header">
+          <div class="adv-number">04</div>
+          <app-icon name="clock" [size]="24" color="#10b981"></app-icon>
+        </div>
+        <h4 class="adv-title">Guaranteed SLAs & Hypercare</h4>
+        <p class="adv-desc">
+          We back every launch with dedicated post-release hypercare, 24/7 incident response SLA, and automated telemetry dashboards.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- INTERACTIVE TECHNOLOGY STACK EXPLORER -->
+<section class="section section-dark tech-explorer-section">
+  <div class="container">
+    <div class="section-header">
+      <span class="badge badge-dark">Production-Proven Tech</span>
+      <h2 class="section-title">The Enterprise Technology Stack</h2>
+      <p class="section-subtitle">
+        We specialize in modern technologies chosen for enterprise longevity, horizontal scalability, and strict security posture.
+      </p>
+    </div>
+
+    <!-- Category Filter Tabs -->
+    <div class="tech-category-tabs">
+      <button
+        type="button"
+        class="tech-tab-btn"
+        *ngFor="let cat of techCategories"
+        [class.active]="activeTechTab === cat"
+        (click)="setTechTab(cat)">
+        {{ cat }}
+      </button>
+    </div>
+
+    <!-- Filtered Tech Grid -->
+    <div class="grid-3 tech-cards-grid">
+      <div class="tech-card card-dark" *ngFor="let tech of filteredTechnologies">
+        <div class="tech-card-header">
+          <div class="tech-icon-container">
+            <app-icon [name]="tech.icon" [size]="32"></app-icon>
+          </div>
+          <div class="tech-meta">
+            <h3 class="tech-name">{{ tech.name }}</h3>
+            <span class="tech-version">{{ tech.versionLts }}</span>
+          </div>
+        </div>
+
+        <p class="tech-tagline">{{ tech.tagline }}</p>
+        <p class="tech-description">{{ tech.description }}</p>
+
+        <div class="tech-capabilities-box">
+          <h4 class="cap-heading">Key Enterprise Highlights:</h4>
+          <ul class="cap-list">
+            <li *ngFor="let cap of tech.coreCapabilities.slice(0, 3)">
+              <app-icon name="check" [size]="14" color="#38bdf8"></app-icon>
+              <span>{{ cap }}</span>
+            </li>
+          </ul>
+        </div>
+
+        <div class="tech-metric-footer">
+          <span class="metric-lead">Production Spec:</span>
+          <span class="metric-detail">{{ tech.productionMetrics }}</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="tech-action-center">
+      <a routerLink="/technologies" class="btn btn-primary btn-lg">
+        <span>Deep Dive into Technologies & Architecture Roles</span>
+        <app-icon name="arrow-right" [size]="16"></app-icon>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- 4-STEP WORKFLOW PROCESS -->
+<section class="section workflow-section">
+  <div class="container">
+    <div class="section-header">
+      <span class="badge badge-primary">Predictable Engineering</span>
+      <h2 class="section-title">Our Enterprise Delivery Framework</h2>
+      <p class="section-subtitle">
+        A structured, milestone-driven development process that removes ambiguity, mitigates risk, and guarantees on-time deployment.
+      </p>
+    </div>
+
+    <div class="workflow-grid">
+      <div class="workflow-card card" *ngFor="let step of workflowSteps">
+        <div class="step-badge-row">
+          <span class="step-number">{{ step.step }}</span>
+          <span class="step-duration">{{ step.duration }}</span>
+        </div>
+
+        <h3 class="step-phase">{{ step.phase }}</h3>
+        <h4 class="step-title">{{ step.title }}</h4>
+        <p class="step-desc">{{ step.description }}</p>
+
+        <div class="step-deliverables">
+          <span class="del-heading">Key Deliverables:</span>
+          <ul>
+            <li *ngFor="let del of step.deliverables">
+              <app-icon name="check" [size]="14" color="#10b981"></app-icon>
+              <span>{{ del }}</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FEATURED CASE STUDIES / PROJECTS PREVIEW -->
+<section class="section section-subtle projects-preview-section">
+  <div class="container">
+    <div class="section-header">
+      <span class="badge badge-primary">Proven Track Record</span>
+      <h2 class="section-title">Production Systems Engineered by Kavbix</h2>
+      <p class="section-subtitle">
+        Real-world enterprise applications built to solve mission-critical operational challenges with verifiable ROI.
+      </p>
+    </div>
+
+    <div class="featured-projects-grid">
+      <div class="featured-case-card card" *ngFor="let project of featuredProjects">
+        <div class="case-banner" [style.background]="project.bannerGradient">
+          <div class="banner-top">
+            <span class="industry-tag">{{ project.industry }}</span>
+            <span class="client-type-tag">{{ project.clientType }}</span>
+          </div>
+          <h3 class="banner-title">{{ project.title }}</h3>
+          <p class="banner-tagline">{{ project.tagline }}</p>
+        </div>
+
+        <div class="case-body">
+          <div class="problem-solution-snippet">
+            <div class="ps-block">
+              <span class="ps-label">The Challenge:</span>
+              <p class="ps-text">{{ project.problemStatement | slice:0:160 }}...</p>
+            </div>
+            <div class="ps-block">
+              <span class="ps-label">Our Solution:</span>
+              <p class="ps-text">{{ project.solutionImplemented | slice:0:160 }}...</p>
+            </div>
+          </div>
+
+          <div class="case-tech-row">
+            <span class="tech-badge" *ngFor="let t of project.technologiesUsed.slice(0, 4)">{{ t }}</span>
+          </div>
+
+          <!-- Impact Metrics -->
+          <div class="case-metrics-grid">
+            <div class="case-metric-box" *ngFor="let imp of project.businessImpact.slice(0, 2)">
+              <div class="imp-num">{{ imp.metric }}</div>
+              <div class="imp-txt">{{ imp.description }}</div>
+            </div>
+          </div>
+
+          <div class="case-footer">
+            <a routerLink="/projects" [fragment]="project.id" class="btn btn-secondary btn-sm">
+              <span>View Full Architecture Case Study</span>
+              <app-icon name="arrow-right" [size]="14"></app-icon>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="view-all-projects-center">
+      <a routerLink="/projects" class="btn btn-primary btn-lg">
+        <span>Explore All 6 Enterprise Case Studies</span>
+        <app-icon name="arrow-right" [size]="16"></app-icon>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- CLIENT INDUSTRIES WE EMPOWER -->
+<section class="section industries-section">
+  <div class="container">
+    <div class="section-header">
+      <span class="badge badge-primary">Domain Knowledge</span>
+      <h2 class="section-title">Industries We Specialize In</h2>
+      <p class="section-subtitle">
+        We understand the regulatory, operational, and architectural requirements specific to each sector.
+      </p>
+    </div>
+
+    <div class="grid-3 industries-grid">
+      <div class="industry-card card" *ngFor="let ind of industries">
+        <div class="ind-icon-box">
+          <app-icon [name]="ind.icon" [size]="26" color="#2563eb"></app-icon>
+        </div>
+        <h3 class="ind-name">{{ ind.name }}</h3>
+        <p class="ind-subtitle">{{ ind.subtitle }}</p>
+        <p class="ind-desc">{{ ind.description }}</p>
+
+        <div class="ind-solutions-list">
+          <span class="sol-title">Core Systems Built:</span>
+          <ul>
+            <li *ngFor="let sol of ind.keySolutions">
+              <app-icon name="check" [size]="13" color="#2563eb"></app-icon>
+              <span>{{ sol }}</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TESTIMONIALS & SOCIAL PROOF -->
+<section class="section section-dark testimonials-section">
+  <div class="container">
+    <div class="section-header">
+      <span class="badge badge-dark">Executive Feedback</span>
+      <h2 class="section-title">What Engineering Leaders Say About Us</h2>
+      <p class="section-subtitle">
+        Verified testimonials from CTOs, VPs of Engineering, and Founders who trusted Kavbix with their mission-critical platforms.
+      </p>
+    </div>
+
+    <div class="testimonials-slider-wrapper">
+      <div class="testimonial-active-card card-dark">
+        <div class="quote-stars">
+          <app-icon name="star" [size]="18" color="#f59e0b" *ngFor="let s of [1,2,3,4,5]"></app-icon>
+        </div>
+
+        <blockquote class="testimonial-quote">
+          "{{ testimonials[activeTestimonialIndex].quote }}"
+        </blockquote>
+
+        <div class="testimonial-meta">
+          <div class="client-avatar">
+            {{ testimonials[activeTestimonialIndex].avatarInitials }}
+          </div>
+          <div class="client-info">
+            <h4 class="client-name">{{ testimonials[activeTestimonialIndex].clientName }}</h4>
+            <p class="client-role">{{ testimonials[activeTestimonialIndex].clientRole }}, <strong>{{ testimonials[activeTestimonialIndex].companyName }}</strong></p>
+            <span class="client-domain-tag">{{ testimonials[activeTestimonialIndex].projectDomain }}</span>
+          </div>
+
+          <div class="client-roi-pill">
+            <span class="roi-label">Verified ROI</span>
+            <span class="roi-val">{{ testimonials[activeTestimonialIndex].verifiedRoi }}</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Testimonial Selector Dots -->
+      <div class="testimonial-selectors">
+        <button
+          type="button"
+          class="test-dot-btn"
+          *ngFor="let t of testimonials; let i = index"
+          [class.active]="activeTestimonialIndex === i"
+          (click)="selectTestimonial(i)"
+          [attr.aria-label]="'View testimonial from ' + t.clientName">
+          <span class="dot-inner"></span>
+          <span class="dot-name">{{ t.clientName.split(' ')[0] }} ({{ t.companyName.split(' ')[0] }})</span>
+        </button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ SECTION -->
+<section class="section faq-section">
+  <div class="container">
+    <div class="section-header">
+      <span class="badge badge-primary">Transparency First</span>
+      <h2 class="section-title">Frequently Asked Enterprise Questions</h2>
+      <p class="section-subtitle">
+        Clear answers on intellectual property, architecture paradigms, sprint cadence, and engagement models.
+      </p>
+    </div>
+
+    <app-faq-accordion></app-faq-accordion>
+  </div>
+</section>
+
+<!-- CALL TO ACTION BANNER -->
+<app-cta-banner></app-cta-banner>
